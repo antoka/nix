@@ -4,7 +4,7 @@
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  home-manager.users.adama = {
+  home-manager.users.antoka = {
     imports = [
       inputs.noctalia.homeModules.default
     ];

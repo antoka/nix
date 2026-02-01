@@ -55,10 +55,11 @@
   console.keyMap = "dk-latin1";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.adama = {
+  users.users.antoka = {
     isNormalUser = true;
     description = "Adam Antok";
     extraGroups = [ "networkmanager" "wheel" ];
+    uid = 1000;
     packages = with pkgs; [];
   };
 
