@@ -14,6 +14,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  systemd.tpm2.enable = false;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -79,13 +81,14 @@
     fuzzel
     mako
     croc
-    vivaldi
+    firefox
     obsidian
     nemo-with-extensions
     bibata-cursors
     keepassxc
     imv
     brightnessctl
+    plexamp
   ];
 
   fonts.packages = with pkgs; [
