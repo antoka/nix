@@ -6,6 +6,15 @@
 
   home.stateVersion = "25.11";
 
+  programs.git = {
+    enable = true;
+    userName = "Adam Antok";
+    userEmail = "adam@antok.me";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
+
   # niri config
 
   xdg.configFile."niri/config.kdl".text = ''
