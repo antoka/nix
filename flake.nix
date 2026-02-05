@@ -19,7 +19,7 @@
     noctalia,
     ...
   }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
@@ -34,6 +34,28 @@
 
           home-manager.users.antoka = import ./home.nix;
         }
+
+        ./hosts/desktop/hardware-configuration.nix
+      ];
+    };
+
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./configuration.nix
+	./noctalia.nix
+
+        ./modules/truenas-shares.nix
+        
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.antoka = import ./home.nix;
+        }
+
+        ./hosts/laptop/hardware-configuration.nix
       ];
     };
   };
