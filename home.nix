@@ -8,10 +8,10 @@
 
   programs.git = {
     enable = true;
-    userName = "Adam Antok";
-    userEmail = "adam@antok.me";
-    extraConfig = {
+    settings = {
       init.defaultBranch = "main";
+      user.name = "Adam Antok";
+      user.email = "adam@antok.me";
     };
   };
 
