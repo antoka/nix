@@ -17,6 +17,7 @@
   systemd.tpm2.enable = false;
 
   networking.hostName = "nixos"; # Define your hostname.
+  networking.firewall.checkReversePath = false;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -89,6 +90,7 @@
     imv
     brightnessctl
     plexamp
+    protonvpn-gui
   ];
 
   fonts.packages = with pkgs; [
@@ -107,6 +109,22 @@
 
   programs.niri = {
     enable = true;
+  };
+
+  xdg.mime.defaultApplications = {
+    "application/pdf" = "firefox.desktop";
+  };
+
+  # autodiscovery of network printers
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.brlaser ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
