@@ -162,7 +162,7 @@
           boxBorderEnabled = false;
         };
         location = {
-          name = "Tokyo";
+          name = "Billund";
           weatherEnabled = true;
           weatherShowEffects = true;
           useFahrenheit = false;
@@ -171,7 +171,7 @@
           showCalendarEvents = true;
           showCalendarWeather = true;
           analogClockInCalendar = false;
-          firstDayOfWeek = -1;
+          firstDayOfWeek = 0;
           hideWeatherTimezone = false;
           hideWeatherCityName = false;
         };

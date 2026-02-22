@@ -104,7 +104,8 @@
   services.xserver.enable = true;
   services.xserver.displayManager.lightdm = { 
       enable = true;
-      greeters.gtk.enable = true;
+      greeters.mini.enable = true;
+      greeters.mini.user = "antoka";
   };
 
   programs.niri = {
