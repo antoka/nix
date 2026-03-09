@@ -83,7 +83,6 @@
     mako
     croc
     firefox
-    obsidian
     nemo-with-extensions
     bibata-cursors
     keepassxc
@@ -91,6 +90,9 @@
     brightnessctl
     plexamp
     protonvpn-gui
+    obsidian
+    vscodium
+    signal-desktop
   ];
 
   fonts.packages = with pkgs; [
@@ -99,7 +101,9 @@
   ];
 
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables.EDITOR = "vim";
+  environment.variables.QS_ICON_THEME="Tela";
   
   services.xserver.enable = true;
   services.xserver.displayManager.lightdm = { 

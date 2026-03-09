@@ -6,6 +6,14 @@
 
   home.stateVersion = "25.11";
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.tela-icon-theme;
+      name = "Tela";
+    };
+  };
+
   programs.git = {
     enable = true;
     settings = {
@@ -343,7 +351,7 @@ binds {
     Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+Shift+S { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
@@ -397,5 +405,4 @@ spawn-at-startup "noctalia-shell"
     font.normal.family = "JetBrainsMono Nerd Font";
     font.normal.style = "ExtraLight";
   };
- 
 }
