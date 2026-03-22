@@ -93,6 +93,8 @@
     obsidian
     vscodium
     signal-desktop
+    inkscape
+    thunderbird
   ];
 
   fonts.packages = with pkgs; [
