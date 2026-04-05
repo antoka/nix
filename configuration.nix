@@ -95,6 +95,11 @@
     signal-desktop
     inkscape
     thunderbird
+    parted
+    e2fsprogs
+    dosfstools
+    ntfs3g
+    exfatprogs
   ];
 
   fonts.packages = with pkgs; [
