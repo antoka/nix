@@ -22,9 +22,9 @@
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
-	./noctalia.nix
+        ./common.nix
 
+	./modules/noctalia.nix
         ./modules/truenas-shares.nix
         
         home-manager.nixosModules.home-manager
@@ -42,9 +42,9 @@
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
-	./noctalia.nix
+        ./common.nix
 
+	./modules/noctalia.nix
         ./modules/truenas-shares.nix
         
         home-manager.nixosModules.home-manager

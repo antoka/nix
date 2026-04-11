@@ -77,6 +77,7 @@
   #  wget
     vim
     git
+    gh
     wget
     alacritty
     fuzzel
