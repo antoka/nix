@@ -87,12 +87,12 @@
     nemo-with-extensions
     bibata-cursors
     keepassxc
-    imv
+    qimgv
     brightnessctl
     plexamp
     protonvpn-gui
     obsidian
-    vscodium
+    vscode
     signal-desktop
     inkscape
     thunderbird
@@ -101,6 +101,7 @@
     dosfstools
     ntfs3g
     exfatprogs
+    mc
   ];
 
   fonts.packages = with pkgs; [
