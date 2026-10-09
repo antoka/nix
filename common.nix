@@ -54,6 +54,9 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+
   # Configure console keymap
   console.keyMap = "dk-latin1";
 
@@ -106,6 +109,8 @@
     exiftool
     ffmpeg
     devenv
+    steam
+    gamescope
   ];
 
   fonts.packages = with pkgs; [
