@@ -116,8 +116,7 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+E hotkey-overlay-title="Open a File browser: nemo" { spawn "nemo"; }
-    Mod+D hotkey-overlay-title="Run an Application" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
-    Super+L hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia-shell ipc call lockScreen lock"; }
+    Mod+D hotkey-overlay-title="Run an Application" { spawn-sh "noctalia msg panel-toggle launcher"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -380,7 +379,7 @@ cursor {
     xcursor-size 24
 }
 
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
   '';
 
   programs.vim = {
